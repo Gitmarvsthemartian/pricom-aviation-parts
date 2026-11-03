@@ -1,0 +1,1382 @@
+
+---
+const company = "PRICOM Aviation Parts";
+const phone = "+17739616429";
+const email = "info@pricomaviationparts.com";
+
+const categories = [
+  {
+    number: "01",
+    title: "Aircraft Parts",
+    description: "Quality aircraft components and replacement parts for your aviation needs.",
+  },
+  {
+    number: "02",
+    title: "Aviation Supplies",
+    description: "Essential aviation supplies and materials to keep your operations moving.",
+  },
+  {
+    number: "03",
+    title: "Parts Sourcing",
+    description: "Reliable sourcing solutions for hard-to-find aviation components.",
+  },
+];
+
+const benefits = [
+  "Quality-focused sourcing",
+  "Responsive customer support",
+  "Reliable parts solutions",
+  "Professional service",
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PRICOM Aviation Parts provides aviation parts, supplies, and sourcing solutions. Contact our team for your aircraft component requirements." />
+    <meta name="theme-color" content="#06265b" />
+    <title>PRICOM Aviation Parts | Reliable Aviation Solutions</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav-wrapper">
+        <a href="#home" class="brand" aria-label="PRICOM Aviation Parts Home">
+          <img src="/logo.png" alt="PRICOM Aviation Parts logo" />
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#services">Our Services</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="nav-cta">Get in Touch <span>↗</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="eyebrow"><span class="dot"></span> YOUR AVIATION PARTNER</span>
+            <h1>Reliable Parts.<br /><span>Elevated Aviation.</span></h1>
+            <p>
+              Connecting you with dependable aviation parts and sourcing
+              solutions to keep your operations moving forward.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary">Explore Our Services <span>→</span></a>
+              <a href="#contact" class="btn btn-outline">Contact Our Team</a>
+            </div>
+
+            <div class="hero-trust">
+              <span class="trust-line"></span>
+              <span>Committed to quality. Focused on reliability.</span>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-card">
+              <div class="visual-top">
+                <span>AVIATION</span>
+                <span class="visual-status"><span></span> PARTS & SOLUTIONS</span>
+              </div>
+              <div class="aviation-symbol">
+                <svg viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Decorative aircraft illustration">
+                  <path d="M205 24 L215 24 L230 115 L370 164 L370 178 L230 157 L230 215 L270 240 L270 250 L210 236 L150 250 L150 240 L190 215 L190 157 L50 178 L50 164 L190 115 Z" fill="#0A3477" />
+                  <path d="M210 24 L215 24 L230 115 L370 164 L370 178 L230 157 L230 215 L270 240 L270 250 L210 236 L150 250 L150 240 L190 215 L190 157 L50 178 L50 164 L190 115 Z" stroke="#9BB8D8" stroke-width="2" />
+                  <path d="M210 40 L210 225" stroke="#5B8E54" stroke-width="2" stroke-dasharray="5 7"/>
+                  <circle cx="210" cy="128" r="35" fill="#F4F7FB" stroke="#5B8E54" stroke-width="3"/>
+                  <path d="M210 100 L224 128 L210 157 L196 128 Z" fill="#0A3477"/>
+                </svg>
+              </div>
+              <div class="visual-bottom">
+                <div>
+                  <strong>PRICOM</strong>
+                  <span>AVIATION PARTS</span>
+                </div>
+                <span class="visual-arrow">↗</span>
+              </div>
+            </div>
+            <div class="floating-badge">
+              <span class="badge-icon">✦</span>
+              <div>
+                <strong>Built on Reliability</strong>
+                <span>Driven by Quality</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom-line">
+          <span>AVIATION PARTS & PROCUREMENT</span>
+          <span>PRECISION · QUALITY · RELIABILITY</span>
+        </div>
+      </section>
+
+      <section class="services section" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">WHAT WE DO</span>
+              <h2>Aviation solutions<br />you can <span>count on.</span></h2>
+            </div>
+            <p>
+              Supporting your aviation requirements with dependable parts,
+              sourcing expertise, and professional service.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            {categories.map((item) => (
+              <article class="service-card">
+                <span class="card-number">{item.number}</span>
+                <div class="service-icon">
+                  {item.number === "01" && <span>✈</span>}
+                  {item.number === "02" && <span>⚙</span>}
+                  {item.number === "03" && <span>↗</span>}
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <a href="#contact" class="card-link">Discuss your requirements <span>→</span></a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container about-grid">
+          <div class="about-visual">
+            <div class="about-accent"></div>
+            <img src="/logo.png" alt="PRICOM Aviation Parts emblem" />
+            <div class="about-label">
+              <span class="label-line"></span>
+              <span>YOUR TRUSTED AVIATION PARTNER</span>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="eyebrow">ABOUT PRICOM</span>
+            <h2>Committed to keeping aviation <span>moving.</span></h2>
+            <p>
+              PRICOM Aviation Parts is dedicated to supporting aviation
+              professionals with quality-focused parts and dependable sourcing
+              solutions.
+            </p>
+            <p>
+              We believe that reliability, responsive communication, and
+              attention to detail are essential in every aviation partnership.
+            </p>
+
+            <div class="benefits">
+              {benefits.map((benefit) => (
+                <div class="benefit">
+                  <span class="check">✓</span>
+                  <span>{benefit}</span>
+                </div>
+              ))}
+            </div>
+
+            <a href="#contact" class="btn btn-primary">Let's Work Together <span>→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="container contact-wrapper">
+          <div class="contact-content">
+            <span class="eyebrow eyebrow-light"><span class="dot"></span> LET'S CONNECT</span>
+            <h2>Have a parts<br />requirement?</h2>
+            <p>Our team is ready to hear from you. Let's discuss how we can support your aviation needs.</p>
+          </div>
+
+          <div class="contact-details">
+            <a href={`mailto:${email}`} class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>
+                <small>GENERAL INQUIRIES</small>
+                <strong>{email}</strong>
+              </span>
+              <span class="contact-arrow">↗</span>
+            </a>
+
+            <a href="mailto:sales@pricomaviationparts.com" class="contact-item">
+              <span class="contact-icon">↗</span>
+              <span>
+                <small>SALES INQUIRIES</small>
+                <strong>sales@pricomaviationparts.com</strong>
+              </span>
+              <span class="contact-arrow">↗</span>
+            </a>
+
+            <a href="mailto:infosales@pricomaviationparts.com" class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>
+                <small>INFORMATION & SALES</small>
+                <strong>infosales@pricomaviationparts.com</strong>
+              </span>
+              <span class="contact-arrow">↗</span>
+            </a>
+
+            <div class="contact-phone">
+              <span class="contact-icon">☎</span>
+              <span>
+                <small>CALL OR WHATSAPP</small>
+                <strong>+1 (773) 961-6429</strong>
+              </span>
+              <div class="phone-actions">
+                <a href={`tel:${phone}`}>Call</a>
+                <a href={`https://wa.me/${phone}`} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <a href="#home" class="footer-brand">
+          <img src="/logo.png" alt="PRICOM Aviation Parts" />
+        </a>
+        <p>Reliable Parts. Elevated Aviation.</p>
+        <a href="#home" class="back-top">Back to top ↑</a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© {new Date().getFullYear()} PRICOM Aviation Parts. All rights reserved.</span>
+        <span>QUALITY <span class="footer-dot">●</span> RELIABILITY <span class="footer-dot">●</span> SERVICE</span>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector("#menuToggle");
+      const navLinks = document.querySelector("#navLinks");
+
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = navLinks?.classList.toggle("active");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      navLinks?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          menuToggle?.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  :root {
+    --navy: #06265b;
+    --navy-dark: #03183c;
+    --blue: #0a3477;
+    --green: #08733f;
+    --green-light: #eaf4ed;
+    --white: #ffffff;
+    --light: #f5f7fa;
+    --text: #24334b;
+    --muted: #68778c;
+    --border: #e3e8ef;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .container {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 94px;
+    gap: 30px;
+  }
+
+  .brand img {
+    width: 225px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .nav-links a {
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--green);
+  }
+
+  .nav-cta {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    background: var(--navy);
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover {
+    background: var(--green);
+  }
+
+  .menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--navy);
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    background: var(--light);
+    overflow: hidden;
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0 0 0 55%;
+    opacity: 0.5;
+    background-image: linear-gradient(30deg, transparent 49%, #dce5ef 50%, transparent 51%),
+      linear-gradient(150deg, transparent 49%, #dce5ef 50%, transparent 51%);
+    background-size: 90px 90px;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 50px;
+    padding-top: 95px;
+    padding-bottom: 105px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    display: inline-block;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 5.4vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+    color: var(--navy);
+    margin: 22px 0;
+    font-weight: 800;
+  }
+
+  .hero h1 span,
+  .section-heading h2 span,
+  .about-content h2 span {
+    color: var(--green);
+  }
+
+  .hero-text > p {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 490px;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 23px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background: var(--navy);
+  }
+
+  .btn-primary:hover {
+    background: var(--green);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    color: var(--navy);
+    border: 1px solid #cbd5e2;
+    background: transparent;
+  }
+
+  .btn-outline:hover {
+    background: #fff;
+    border-color: var(--navy);
+  }
+
+  .hero-trust {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #718096;
+    font-size: 12px;
+  }
+
+  .trust-line {
+    width: 30px;
+    height: 2px;
+    background: var(--green);
+  }
+
+  /* HERO VISUAL */
+  .hero-visual {
+    position: relative;
+    padding: 20px;
+  }
+
+  .visual-card {
+    position: relative;
+    background: var(--navy);
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 25px 60px rgba(6, 38, 91, 0.15);
+  }
+
+  .visual-card::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 50%;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+  }
+
+  .visual-card::after {
+    content: "";
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 50%;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+  }
+
+  .visual-top,
+  .visual-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .visual-top {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #a6c3dc;
+    font-weight: 700;
+  }
+
+  .visual-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .visual-status span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #71b78a;
+  }
+
+  .aviation-symbol {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  .aviation-symbol svg {
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .visual-bottom {
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-top: 20px;
+  }
+
+  .visual-bottom strong,
+  .visual-bottom div span {
+    display: block;
+  }
+
+  .visual-bottom strong {
+    color: white;
+    font-size: 21px;
+    letter-spacing: 2px;
+  }
+
+  .visual-bottom div span {
+    color: #a6c3dc;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .visual-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+  }
+
+  .floating-badge {
+    position: absolute;
+    bottom: -5px;
+    left: -15px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px 22px;
+    background: #fff;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 3;
+  }
+
+  .badge-icon {
+    background: var(--green-light);
+    color: var(--green);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+
+  .floating-badge strong,
+  .floating-badge div span {
+    display: block;
+  }
+
+  .floating-badge strong {
+    color: var(--navy);
+    font-size: 12px;
+  }
+
+  .floating-badge div span {
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .hero-bottom-line {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 15px 5%;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #8290a3;
+  }
+
+  /* SERVICES */
+  .section {
+    padding: 100px 0;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 55px;
+  }
+
+  .section-heading h2,
+  .about-content h2 {
+    color: var(--navy);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin: 16px 0 0;
+  }
+
+  .section-heading > p {
+    max-width: 380px;
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 8px;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--border);
+  }
+
+  .service-card {
+    padding: 35px;
+    min-height: 300px;
+    position: relative;
+    border-right: 1px solid var(--border);
+    transition: background 0.25s;
+  }
+
+  .service-card:last-child {
+    border-right: none;
+  }
+
+  .service-card:hover {
+    background: var(--light);
+  }
+
+  .card-number {
+    position: absolute;
+    top: 27px;
+    right: 30px;
+    font-size: 12px;
+    color: #a6b0bf;
+    letter-spacing: 1px;
+  }
+
+  .service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: var(--green-light);
+    color: var(--green);
+    border-radius: 4px;
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+    color: var(--navy);
+    margin: 0 0 10px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+    min-height: 65px;
+    margin: 0 0 20px;
+  }
+
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  .card-link:hover {
+    gap: 13px;
+  }
+
+  /* ABOUT */
+  .about {
+    background: var(--light);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .about-visual {
+    background: var(--navy);
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+    overflow: hidden;
+  }
+
+  .about-accent {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+  }
+
+  .about-visual img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 390px;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.15));
+  }
+
+  .about-label {
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b9cce0;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    z-index: 2;
+  }
+
+  .label-line {
+    height: 2px;
+    width: 20px;
+    background: #5b8e54;
+  }
+
+  .about-content h2 {
+    margin: 18px 0 24px;
+  }
+
+  .about-content > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 30px 0;
+  }
+
+  .benefit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--green-light);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  /* CONTACT */
+  .contact {
+    background: var(--navy);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 50%;
+    right: -180px;
+    top: -180px;
+  }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow-light {
+    color: #a9c7dd;
+  }
+
+  .eyebrow-light .dot {
+    background: #76b589;
+  }
+
+  .contact-content h2 {
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin: 20px 0;
+  }
+
+  .contact-content > p {
+    color: #b5c4d7;
+    font-size: 15px;
+    max-width: 400px;
+  }
+
+  .contact-details {
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .contact-item,
+  .contact-phone {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .contact-icon {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: #b8d1e7;
+    font-size: 19px;
+    flex-shrink: 0;
+  }
+
+  .contact-item > span:nth-child(2),
+  .contact-phone > span:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .contact-item small,
+  .contact-phone small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #a6bfd8;
+    margin-bottom: 4px;
+  }
+
+  .contact-item strong,
+  .contact-phone strong {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-arrow {
+    color: #91b49a;
+    font-size: 20px;
+    transition: transform 0.2s;
+  }
+
+  .contact-item:hover .contact-arrow {
+    transform: translate(4px, -4px);
+  }
+
+  .phone-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .phone-actions a {
+    padding: 9px 13px;
+    background: #fff;
+    color: var(--navy);
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+
+  .phone-actions a:hover {
+    background: #b7d8c1;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--navy-dark);
+    color: #fff;
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.13);
+    gap: 20px;
+  }
+
+  .footer-brand img {
+    width: 200px;
+    max-height: 65px;
+    object-fit: contain;
+  }
+
+  .footer-top p {
+    font-size: 12px;
+    color: #a6bfd8;
+  }
+
+  .back-top {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .back-top:hover {
+    color: #91c19d;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    color: #849bb5;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-dot {
+    color: #55936a;
+    margin: 0 5px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1000px) {
+    .nav-wrapper {
+      gap: 20px;
+    }
+
+    .brand img {
+      width: 180px;
+    }
+
+    .nav-links {
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    .hero-content {
+      gap: 30px;
+    }
+
+    .visual-card {
+      min-height: 320px;
+      padding: 24px;
+    }
+
+    .about-grid {
+      gap: 50px;
+    }
+
+    .contact-wrapper {
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    html {
+      scroll-padding-top: 75px;
+    }
+
+    .nav-wrapper {
+      min-height: 75px;
+    }
+
+    .brand img {
+      width: 170px;
+    }
+
+    .nav-cta {
+      margin-left: auto;
+      padding: 10px 13px;
+      font-size: 12px;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 10px 5% 20px;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-links a {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      padding-top: 65px;
+      padding-bottom: 80px;
+      gap: 50px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 60px);
+    }
+
+    .hero-visual {
+      max-width: 520px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-bottom-line {
+      font-size: 8px;
+      letter-spacing: 0.8px;
+    }
+
+    .section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      display: block;
+      margin-bottom: 35px;
+    }
+
+    .section-heading > p {
+      margin-top: 20px;
+    }
+
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-card {
+      min-height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 30px;
+    }
+
+    .service-card:last-child {
+      border-bottom: none;
+    }
+
+    .service-card p {
+      min-height: auto;
+    }
+
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .about-visual {
+      min-height: 320px;
+    }
+
+    .about-visual img {
+      max-width: 350px;
+    }
+
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .contact-content h2 {
+      font-size: 48px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      width: 90%;
+    }
+
+    .brand img {
+      width: 130px;
+    }
+
+    .nav-cta {
+      padding: 9px 10px;
+      font-size: 11px;
+      gap: 5px;
+    }
+
+    .hero-content {
+      padding-top: 50px;
+    }
+
+    .hero h1 {
+      letter-spacing: -1.5px;
+    }
+
+    .hero-text > p {
+      font-size: 15px;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    .hero-trust {
+      font-size: 10px;
+      margin-top: 28px;
+    }
+
+    .hero-visual {
+      padding: 10px;
+    }
+
+    .visual-card {
+      min-height: 260px;
+      padding: 20px;
+    }
+
+    .visual-card::before {
+      width: 260px;
+      height: 260px;
+    }
+
+    .visual-card::after {
+      width: 200px;
+      height: 200px;
+    }
+
+    .visual-bottom strong {
+      font-size: 16px;
+    }
+
+    .visual-bottom div span {
+      font-size: 8px;
+    }
+
+    .floating-badge {
+      left: -5px;
+      padding: 12px 14px;
+    }
+
+    .hero-bottom-line {
+      gap: 15px;
+      font-size: 7px;
+    }
+
+    .hero-bottom-line span:last-child {
+      text-align: right;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+      font-size: 34px;
+    }
+
+    .about-visual {
+      min-height: 260px;
+      padding: 25px;
+    }
+
+    .about-accent {
+      width: 210px;
+      height: 210px;
+    }
+
+    .benefits {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-content h2 {
+      font-size: 40px;
+    }
+
+    .contact-item,
+    .contact-phone {
+      gap: 12px;
+    }
+
+    .contact-item strong,
+    .contact-phone strong {
+      font-size: 12px;
+    }
+
+    .contact-icon {
+      width: 34px;
+      height: 34px;
+      font-size: 15px;
+    }
+
+    .phone-actions {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .phone-actions a {
+      text-align: center;
+      padding: 7px 10px;
+    }
+
+    .footer-top {
+      flex-wrap: wrap;
+    }
+
+    .footer-brand img {
+      width: 150px;
+    }
+
+    .footer-top p {
+      order: 3;
+      width: 100%;
+      margin: 0;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+</style>
