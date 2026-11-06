@@ -1,0 +1,242 @@
+
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const services = [
+  {
+    number: "01",
+    title: "Aircraft Parts",
+    description:
+      "We help aviation businesses source aircraft components and replacement parts to support maintenance, repairs, and operational requirements.",
+    tag: "COMPONENT SOURCING",
+  },
+  {
+    number: "02",
+    title: "Aviation Supplies",
+    description:
+      "We assist in sourcing essential aviation supplies and materials to help keep aircraft operations and maintenance activities running smoothly.",
+    tag: "AVIATION MATERIALS",
+  },
+  {
+    number: "03",
+    title: "Parts Sourcing",
+    description:
+      "From standard components to hard-to-find parts, we work to identify sourcing options based on your specific requirements.",
+    tag: "SPECIALIZED SOURCING",
+  },
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Submit Your Inquiry",
+    description:
+      "Share the part number, specifications, quantity, and other relevant requirements.",
+  },
+  {
+    number: "02",
+    title: "Sourcing & Coordination",
+    description:
+      "Our team reviews your requirements and works on identifying suitable sourcing options.",
+  },
+  {
+    number: "03",
+    title: "Review & Confirmation",
+    description:
+      "We coordinate the available details and provide information for your review.",
+  },
+  {
+    number: "04",
+    title: "Fulfillment Support",
+    description:
+      "We coordinate the next steps to help move your parts request forward.",
+  },
+];
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | PRICOM Aviation Parts</title>
+  <meta
+    name="description"
+    content="Explore PRICOM Aviation Parts services including aircraft parts, aviation supplies, and specialized parts sourcing."
+  />
+</head>
+
+<body>
+  <Header />
+
+  <main>
+    <!-- SERVICES HERO -->
+    <section class="services-hero" id="top">
+      <div class="services-hero-pattern"></div>
+
+      <div class="container services-hero-content">
+        <span class="eyebrow">
+          <span class="dot"></span>
+          WHAT WE DO
+        </span>
+
+        <h1>
+          Aviation Parts.<br />
+          <span>Reliable Sourcing.</span>
+        </h1>
+
+        <p>
+          Connecting aviation businesses with dependable parts,
+          essential supplies, and sourcing solutions tailored
+          to their operational needs.
+        </p>
+
+        <div class="services-hero-actions">
+          <a href="#our-services" class="btn btn-primary">
+            Explore Our Services <span>→</span>
+          </a>
+
+          <a href="/contact" class="btn btn-outline">
+            Contact Our Team
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="services-list-section" id="our-services">
+      <div class="container">
+        <div class="services-section-heading">
+          <div>
+            <span class="eyebrow">OUR EXPERTISE</span>
+            <h2>Solutions That Keep<br />You Moving.</h2>
+          </div>
+
+          <p>
+            We focus on understanding your requirements and
+            connecting you with dependable aviation parts
+            sourcing solutions.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          {services.map((service) => (
+            <article class="service-card">
+              <div class="service-card-top">
+                <span class="service-number">{service.number}</span>
+                <span class="service-tag">{service.tag}</span>
+              </div>
+
+              <div class="service-card-content">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+
+              <a href="/contact" class="service-card-link">
+                Discuss Your Requirements <span>↗</span>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="services-process-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">HOW WE WORK</span>
+          <h2>A Straightforward<br />Sourcing Process.</h2>
+          <p>
+            Our approach is built around communication,
+            coordination, and understanding your requirements
+            every step of the way.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          {process.map((step) => (
+            <article class="process-item">
+              <span class="process-number">{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY PRICOM -->
+    <section class="services-why-section">
+      <div class="container services-why-grid">
+        <div class="services-why-content">
+          <span class="eyebrow">THE PRICOM APPROACH</span>
+
+          <h2>Built on Reliability.<br /><span>Driven by Service.</span></h2>
+
+          <p>
+            We understand that sourcing aviation parts requires
+            attention to detail, clear communication, and a
+            dependable approach. Our focus is on helping you
+            find solutions that align with your needs.
+          </p>
+
+          <a href="/about" class="btn btn-primary">
+            Learn About PRICOM <span>→</span>
+          </a>
+        </div>
+
+        <div class="services-why-list">
+          <div class="why-item">
+            <span>01</span>
+            <div>
+              <h3>Customer-Focused</h3>
+              <p>We take the time to understand your specific requirements.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <span>02</span>
+            <div>
+              <h3>Quality-Conscious</h3>
+              <p>We prioritize dependable products and trusted sourcing channels.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <span>03</span>
+            <div>
+              <h3>Responsive Communication</h3>
+              <p>We value timely communication and professional assistance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="services-cta">
+      <div class="container services-cta-content">
+        <span class="eyebrow eyebrow-light">
+          <span class="dot"></span>
+          LET'S GET STARTED
+        </span>
+
+        <h2>Looking for a<br />Specific Part?</h2>
+
+        <p>
+          Tell us what you need. Our team is ready to discuss
+          your aviation parts sourcing requirements.
+        </p>
+
+        <a href="/contact" class="btn btn-primary">
+          Submit an Inquiry <span>↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</body>
+</html>

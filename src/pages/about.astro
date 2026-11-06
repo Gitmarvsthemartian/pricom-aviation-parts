@@ -1,0 +1,197 @@
+
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const company = "PRICOM Aviation Parts";
+const phone = "17739616429";
+const email = "info@pricomaviationparts.com";
+
+const categories = [
+  {
+    number: "01",
+    title: "Aircraft Parts",
+    description: "Quality aircraft components and replacement parts for your aviation needs.",
+  },
+  {
+    number: "02",
+    title: "Aviation Supplies",
+    description: "Essential aviation supplies and materials to keep your operations moving.",
+  },
+  {
+    number: "03",
+    title: "Parts Sourcing",
+    description: "Reliable sourcing solutions for hard-to-find aviation components.",
+  },
+];
+
+const benefits = [
+  "Quality-focused sourcing",
+  "Responsive customer support",
+  "Reliable parts solutions",
+  "Professional service",
+];
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Pricom Aviation Parts</title>
+  <meta name="description" content="Learn about Pricom Aviation Parts, your trusted partner in aviation parts sourcing and procurement." />
+</head>
+
+<body>
+    
+    <Header />
+<main>
+  <!-- HERO SECTION -->
+  <section class="about-hero hero" id="about">
+    <div class="hero-overlay"></div>
+
+    <div class="about-container">
+      <span class="eyebrow">ABOUT PRICOM AVIATION PARTS</span>
+
+      <h1>
+        Your Trusted Partner<br />
+        <span>in Aviation Parts.</span>
+      </h1>
+
+      <p>
+        Connecting the aviation industry with dependable parts sourcing,
+        professional service, and solutions built around your needs.
+      </p>
+      <br />
+
+      <a href="/contact" class="btn btn-primary">
+        Get in Touch <span>↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section class="about-intro">
+    <div class="about-container intro-grid">
+
+      <div class="intro-label">
+        <span class="eyebrow">WHO WE ARE</span>
+        <h2>Connecting Aviation with Reliable Solutions.</h2>
+      </div>
+
+      <div class="intro-text">
+        <p>
+          Pricom Aviation Parts is dedicated to connecting aviation
+          businesses with the parts and resources they need to keep
+          their operations moving.
+        </p>
+
+        <p>
+          We focus on understanding each customer's unique requirements
+          and providing professional assistance throughout the sourcing
+          process.
+        </p>
+
+        <p>
+          With a commitment to service, efficiency, and industry
+          standards, we aim to make aircraft parts procurement a
+          seamless and dependable experience.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="mission-section">
+    <div class="about-container">
+
+      <div class="section-heading">
+        <span class="eyebrow">WHAT DRIVES US</span>
+        <h2>Our Purpose & Direction</h2>
+      </div>
+
+      <div class="mission-grid">
+
+        <div class="mission-card">
+          <span class="card-number">01 / MISSION</span>
+          <h3>Delivering Reliable Solutions</h3>
+          <p>
+            To provide reliable, efficient, and customer-focused
+            aviation parts sourcing solutions that support the
+            safety, performance, and operational needs of the
+            aviation industry.
+          </p>
+        </div>
+
+        <div class="mission-card">
+          <span class="card-number">02 / VISION</span>
+          <h3>Building Lasting Partnerships</h3>
+          <p>
+            To become a trusted partner in aviation parts supply,
+            recognized for our commitment to quality, dependable
+            service, and long-term customer relationships.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="values-section">
+    <div class="about-container">
+
+      <div class="section-heading centered">
+        <span class="eyebrow">OUR COMMITMENT</span>
+        <h2>Service You Can Count On.</h2>
+        <p>
+          We strive to make aviation parts sourcing easier
+          through dependable service and a customer-first approach.
+        </p>
+      </div>
+
+      <div class="values-grid">
+
+        <div class="value-item">
+          <span class="value-icon">◇</span>
+          <h3>Reliable Sourcing</h3>
+          <p>Helping customers locate the aviation parts they need.</p>
+        </div>
+
+        <div class="value-item">
+          <span class="value-icon">✓</span>
+          <h3>Quality Focus</h3>
+          <p>Prioritizing dependable products and trusted sourcing channels.</p>
+        </div>
+
+        <div class="value-item">
+          <span class="value-icon">◎</span>
+          <h3>Customer First</h3>
+          <p>Understanding your requirements and providing responsive assistance.</p>
+        </div>
+
+        <div class="value-item">
+          <span class="value-icon">↗</span>
+          <h3>Efficient Support</h3>
+          <p>Making the parts procurement process straightforward and convenient.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+      </main>
+
+
+
+  <Footer />
+
+</body>
+</html>
+
+

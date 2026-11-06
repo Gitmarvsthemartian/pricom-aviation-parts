@@ -1,0 +1,52 @@
+
+---
+const company = "PRICOM Aviation Parts";
+---
+
+<header class="header">
+  <div class="container nav-wrapper">
+    <a href="/" class="brand" aria-label={`${company} Home`}>
+      <img src="/logo.png" alt={`${company} logo`} />
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/services">Our Services</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <a href="/contact" class="nav-cta">
+      Get in Touch <span>↗</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.querySelector("#menuToggle");
+  const navLinks = document.querySelector("#navLinks");
+
+  menuToggle?.addEventListener("click", () => {
+    const isOpen = navLinks?.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks?.classList.remove("active");
+      menuToggle?.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>

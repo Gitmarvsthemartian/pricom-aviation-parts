@@ -1,0 +1,97 @@
+
+---
+const company = "PRICOM Aviation Parts";
+const email = "info@pricomaviationparts.com";
+const phone = "17739616429";
+---
+
+<!-- CONTACT SECTION -->
+<section class="contact section" id="contact">
+  <div class="container contact-wrapper">
+    <div class="contact-content">
+      <span class="eyebrow eyebrow-light">
+        <span class="dot"></span> LET'S CONNECT
+      </span>
+
+      <h2>Have a parts<br />requirement?</h2>
+
+      <p>
+        Our team is ready to hear from you. Let's discuss how
+        we can support your aviation needs.
+      </p>
+    </div>
+
+    <div class="contact-details">
+      <a href={`mailto:${email}`} class="contact-item">
+        <span class="contact-icon">✉</span>
+        <span>
+          <small>GENERAL INQUIRIES</small>
+          <strong>{email}</strong>
+        </span>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <a href="mailto:sales@pricomaviationparts.com" class="contact-item">
+        <span class="contact-icon">↗</span>
+        <span>
+          <small>SALES INQUIRIES</small>
+          <strong>sales@pricomaviationparts.com</strong>
+        </span>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <a href="mailto:infosales@pricomaviationparts.com" class="contact-item">
+        <span class="contact-icon">✉</span>
+        <span>
+          <small>INFORMATION & SALES</small>
+          <strong>infosales@pricomaviationparts.com</strong>
+        </span>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <div class="contact-phone">
+        <span class="contact-icon">☎</span>
+        <span>
+          <small>CALL OR WHATSAPP</small>
+          <strong>+1 (773) 961-6429</strong>
+        </span>
+
+        <div class="phone-actions">
+          <a href={`tel:${phone}`}>Call</a>
+          <a
+            href={`https://wa.me/${phone}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-top">
+    <a href="/" class="footer-brand" aria-label={`${company} Home`}>
+      <img src="/logo.png" alt={company} />
+    </a>
+
+    <p>Reliable Parts. Elevated Aviation.</p>
+
+    <a href="#top" class="back-top">Back to top ↑</a>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>
+      © {new Date().getFullYear()} {company}. All rights reserved.
+    </span>
+
+    <span>
+      QUALITY <span class="footer-dot">●</span>
+      RELIABILITY <span class="footer-dot">●</span>
+      SERVICE
+    </span>
+  </div>
+</footer>

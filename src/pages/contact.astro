@@ -1,0 +1,309 @@
+
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const contacts = [
+  {
+    label: "GENERAL INQUIRIES",
+    email: "info@pricomaviationparts.com",
+    icon: "✉",
+  },
+  {
+    label: "SALES INQUIRIES",
+    email: "sales@pricomaviationparts.com",
+    icon: "↗",
+  },
+  {
+    label: "INFORMATION & SALES",
+    email: "infosales@pricomaviationparts.com",
+    icon: "✉",
+  },
+];
+
+const phone = "17739616429";
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | PRICOM Aviation Parts</title>
+  <meta
+    name="description"
+    content="Contact PRICOM Aviation Parts for aircraft components, aviation supplies, and sourcing inquiries."
+  />
+</head>
+
+<body>
+  <Header />
+
+  <main>
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+      <div class="container">
+        <span class="eyebrow">
+          <span class="dot"></span>
+          GET IN TOUCH
+        </span>
+
+        <h1>
+          Let's Talk About<br />
+          <span>Your Requirements.</span>
+        </h1>
+
+        <p>
+          Have a question or looking for a specific aviation part?
+          Our team is ready to assist you with your sourcing needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT INFORMATION -->
+    <section class="contact-main">
+      <div class="container contact-main-grid">
+
+        <div class="contact-info">
+          <span class="eyebrow">CONTACT INFORMATION</span>
+
+          <h2>We're Here<br />To Help You.</h2>
+
+          <p>
+            Reach out to our team directly. Whether you have a
+            general question or a specific parts requirement,
+            we look forward to hearing from you.
+          </p>
+
+          <div class="contact-email-list">
+            {contacts.map((contact) => (
+              <a
+                href={`mailto:${contact.email}`}
+                class="contact-email-item"
+              >
+                <span class="contact-email-icon">{contact.icon}</span>
+
+                <span class="contact-email-text">
+                  <small>{contact.label}</small>
+                  <strong>{contact.email}</strong>
+                </span>
+
+                <span class="contact-email-arrow">↗</span>
+              </a>
+            ))}
+          </div>
+
+          <div class="contact-phone-block">
+            <span class="contact-phone-icon">☎</span>
+
+            <div class="contact-phone-info">
+              <small>CALL OR WHATSAPP</small>
+              <strong>+1 (773) 961-6429</strong>
+
+              <div class="contact-phone-actions">
+                <a href={`tel:+${phone}`}>Call Us</a>
+                <a
+                  href={`https://wa.me/${phone}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT CTA -->
+        
+<div class="contact-cta-card contact-form-card">
+  <span class="contact-cta-number">01 / REQUEST FOR QUOTATION</span>
+
+  <h3>Tell Us What<br />You Need.</h3>
+
+  <p>
+    Complete the form below and our team will review your
+    aviation parts requirements.
+  </p>
+
+  <form
+  id="quoteForm"
+  class="quote-form"
+  action="/api/quote"
+  method="POST"
+>
+
+    <div class="quote-form-field">
+      <label for="quote-name">Full Name <span>*</span></label>
+      <input type="text" id="quote-name" name="name" required />
+    </div>
+
+    <div class="quote-form-field">
+      <label for="quote-company">Company Name <span>*</span></label>
+      <input type="text" id="quote-company" name="company" required />
+    </div>
+
+    <div class="quote-form-field">
+      <label for="quote-email">Email Address <span>*</span></label>
+      <input type="email" id="quote-email" name="email" required />
+    </div>
+
+    <div class="quote-form-field">
+      <label for="quote-phone">Phone Number</label>
+      <input type="tel" id="quote-phone" name="phone" />
+    </div>
+
+    <div class="quote-form-field">
+      <label for="quote-address">Street Address <span>*</span></label>
+      <input type="text" id="quote-address" name="street_address" required />
+    </div>
+
+    <div class="quote-form-field">
+      <label for="quote-address2">Address Line 2</label>
+      <input type="text" id="quote-address2" name="address_line2" />
+    </div>
+
+    <div class="quote-form-row">
+      <div class="quote-form-field">
+        <label for="quote-city">City <span>*</span></label>
+        <input type="text" id="quote-city" name="city" required />
+      </div>
+
+      <div class="quote-form-field">
+        <label for="quote-state">State / Province <span>*</span></label>
+        <input type="text" id="quote-state" name="state" required />
+      </div>
+    </div>
+
+    <div class="quote-form-row">
+      <div class="quote-form-field">
+        <label for="quote-zip">ZIP / Postal Code <span>*</span></label>
+        <input type="text" id="quote-zip" name="zip" required />
+      </div>
+
+      <div class="quote-form-field">
+        <label for="quote-country">Country <span>*</span></label>
+        <input type="text" id="quote-country" name="country" required />
+      </div>
+    </div>
+
+    <div class="quote-form-field">
+      <label for="quote-message">Requirements / Comments <span>*</span></label>
+      <textarea
+        id="quote-message"
+        name="requirements"
+        rows="5"
+        placeholder="Part number, quantity, specifications, or other requirements..."
+        required
+      ></textarea>
+    </div>
+
+    <div
+  class="cf-turnstile"
+  data-sitekey="0x4AAAAAAF17WfqbV9Jt6Uax"
+></div>
+
+    <button type="submit" class="btn btn-primary quote-submit">
+      Submit Request <span>↗</span>
+    </button>
+
+    <p class="quote-form-note">
+      Your information will be handled confidentially.
+    </p>
+
+    <div id="quoteFormMessage" class="quote-form-message" aria-live="polite"></div>
+
+  </form>
+</div>
+
+
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="contact-bottom-cta">
+      <div class="container">
+        <span class="eyebrow eyebrow-light">
+          <span class="dot"></span>
+          LET'S CONNECT
+        </span>
+
+        <h2>Ready to Get<br />Started?</h2>
+
+        <p>
+          Tell us what you need. Let's find the right sourcing
+          solution for your aviation business.
+        </p>
+
+        <a href="#quoteForm" class="btn btn-light">
+          Submit Your Request <span>→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+
+<script>
+  const quoteForm = document.querySelector<HTMLFormElement>("#quoteForm");
+  const quoteMessage = document.querySelector<HTMLDivElement>(
+    "#quoteFormMessage"
+  );
+
+  quoteForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!quoteForm.reportValidity()) return;
+
+    const submitButton = quoteForm.querySelector<HTMLButtonElement>(
+      ".quote-submit"
+    );
+
+    if (!submitButton || !quoteMessage) return;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+    quoteMessage.textContent = "";
+
+    try {
+      const formData = new FormData(quoteForm);
+
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Submission failed.");
+      }
+
+      quoteMessage.textContent = result.message;
+      quoteMessage.className = "quote-form-message success";
+
+      quoteForm.reset();
+
+    } catch (error) {
+      quoteMessage.textContent =
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.";
+
+      quoteMessage.className = "quote-form-message error";
+
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = 'Submit Request <span>↗</span>';
+    }
+  });
+</script>
+
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+></script>
+</body>
+</html>
